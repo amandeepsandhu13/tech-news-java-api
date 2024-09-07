@@ -46,7 +46,7 @@ public class CommentController {
            return ResponseEntity.notFound().build();
        }
     }
-    @DeleteMapping("/api/delete/{id}")
+    @DeleteMapping("/api/comments/delete/{id}")
     public boolean deleteComment(@PathVariable int id){
         Optional<Comment> comment = commentRepository.findById(id);
         if(comment.isPresent()) {

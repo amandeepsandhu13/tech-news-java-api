@@ -60,7 +60,7 @@ public class UserController {
             return user;
     }
 
-    @DeleteMapping("/api/delete/{id}")
+    @DeleteMapping("/api/users/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteUser(@PathVariable int id){
             userRepository.deleteById(id);
